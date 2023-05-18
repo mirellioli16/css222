@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Footer component 02</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style_menu.css" />
+        <link rel="stylesheet" href="style_3.css" />
+        <link 
+            rel="stylesheet" 
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+		/>
+    </head>
+    <!-- The body inline styles and the empty div are only used for demo purposes to push down the footer. -->
+
+    <body style="display: flex; flex-direction: column; justify-content: space-between; height: 100vh">
+        <div></div>
+        <!-- The body inline styles and the empty div are only used for demo purposes to push down the footer. -->
+
+
+        <section class="faq container" aria-label="Frequently Asked Questions">
+			<header class="faq__header">
+				<h2 class="faq__header-title">Frequently Asked Questions</h2>
+			</header>
+			<div class="faq__body">
+				<details aria-expanded="true" class="faq__panel" open>
+					<summary class="faq__label">What is a product key?</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+							fuga, aliquid nesciunt perspiciatis est similique? Alias nulla
+							animi dolorum provident id aspernatur, nisi consequuntur iusto!
+							Neque perferendis eaque corrupti alias.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">
+						Where do I find Office product key?
+					</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+							fuga, aliquid nesciunt perspiciatis est similique? Alias nulla
+							animi dolorum provident id aspernatur, nisi consequuntur iusto!
+							Neque perferendis eaque corrupti alias.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">
+						How long does it take to download?
+					</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+							fuga, aliquid nesciunt perspiciatis est similique? Alias nulla
+							animi dolorum provident id aspernatur, nisi consequuntur iusto!
+							Neque perferendis eaque corrupti alias.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">What happens after I download?</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+							fuga, aliquid nesciunt perspiciatis est similique? Alias nulla
+							animi dolorum provident id aspernatur, nisi consequuntur iusto!
+							Neque perferendis eaque corrupti alias.
+						</p>
+					</div>
+				</details>
+			</div>
+		</section>
+
+		<script>
+			const panels = document.querySelectorAll('.faq__panel')
+			const panelLabels = document.querySelectorAll('.faq__label')
+			panels.forEach((panel, index) => {
+				let isExpanded = panel.getAttribute('aria-expanded') === 'true'
+
+				panelLabels[index].addEventListener('click', () => {
+					console.log('clicked')
+					isExpanded = !isExpanded
+					panel.setAttribute('aria-expanded', isExpanded)
+				})
+			})
+		</script>
+
+
+
+
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link current" href="#">
+                        <span><i class="fas fa-home"></i></span> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-address-card"></i></span> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-briefcase"></i></span> Portfolio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-blog"></i></span> Blog
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span><i class="fas fa-envelope"></i></span> Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+    <main>
+        <div class="zoom">
+            <!-- Main content simulation -->
+            <section></section>
+            <!-- Main content simulation end -->
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__top">
+                    <div class="company__info">
+                        <h2 class="company__logo">Microsoft</h2>
+                        <p class="company__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, iure. Harum, animi dolores,
+                            nam, ad magni expedita.
+                        </p>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">
+                                    <i class="ri-facebook-circle-line"></i>
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">
+                                    <i class="ri-twitter-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="copyright">&copy;2021 Company name. All rights reserved.</span>
+                    </div>
+
+                    <div>
+                        <h6 class="footer__title">Microsoft Store</h6>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">About</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Careers</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Affiliates</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Sitemap</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h6 class="footer__title">Education</h6>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">About</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Careers</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Affiliates</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Sitemap</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h6 class="footer__title">Business</h6>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">About</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Careers</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Affiliates</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-link">Sitemap</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
